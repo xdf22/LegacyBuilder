@@ -1,0 +1,10 @@
+Disclaimer of warranty:
+
+This software is provided as is without warranty of any kind. Don't expect this software to do anything. If it causes you problems, don't blame us. Peace out.
+
+Zone Builder is a map editor for:
+Sonic Robo Blast 2 - https://srb2.org
+SRB2Kart - https://kartkrew.org
+
+The source code can be found at:
+https://git.do.srb2.org/STJr/ZoneBuilder
