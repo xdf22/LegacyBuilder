@@ -62,6 +62,7 @@ namespace CodeImp.DoomBuilder.Config
         private readonly string repeatmidtextureflag;
         private readonly string pegmidtextureflag;
 		private readonly bool skillflags;
+        private readonly bool multitagging;
         private readonly bool mixtexturesflats;
 		private readonly bool generalizedactions;
 		private readonly bool generalizedeffects;
@@ -192,6 +193,7 @@ namespace CodeImp.DoomBuilder.Config
         public string RepeatMidtextureFlag { get { return repeatmidtextureflag; } }
         public string PegMidtextureFlag { get { return pegmidtextureflag; } }
 
+        public bool Multitagging { get { return multitagging; } }
         public bool SkillFlags { get { return skillflags; } }
         public bool MixTexturesFlats { get { return mixtexturesflats; } }
 		public bool GeneralizedActions { get { return generalizedactions; } }
@@ -358,7 +360,8 @@ namespace CodeImp.DoomBuilder.Config
 			defaultceilingtexture = cfg.ReadSetting("defaultceilingtexture", "CEIL1_1"); //mxd
 			scaledtextureoffsets = cfg.ReadSetting("scaledtextureoffsets", true);
 			formatinterface = cfg.ReadSetting("formatinterface", "");
-            skillflags = cfg.ReadSetting("skillflags", true);
+            skillflags = cfg.ReadSetting("skillflags", false);
+            multitagging = cfg.ReadSetting("multitagging", false);
             mixtexturesflats = cfg.ReadSetting("mixtexturesflats", false);
 			generalizedactions = cfg.ReadSetting("generalizedlinedefs", false);
 			generalizedeffects = cfg.ReadSetting("generalizedsectors", false);

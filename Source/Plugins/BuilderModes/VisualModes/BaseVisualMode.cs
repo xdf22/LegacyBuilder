@@ -1046,7 +1046,7 @@ namespace CodeImp.DoomBuilder.BuilderModes
 					}
 					*/
 
-					if (l.Action == 97 || l.Action == 98 || l.Action == 99)
+					if ((l.Action == 97 || l.Action == 98 || l.Action == 99) && General.Map.Config.Multitagging)
 					{
 						int[] tags = new int[5];
 
