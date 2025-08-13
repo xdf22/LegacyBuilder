@@ -814,6 +814,12 @@ namespace CodeImp.DoomBuilder.Map
 			if (ParseAdditive(Front.HighTexture)) Args[2] += 64;
 			if (ParseSubtractive(Front.HighTexture)) Args[2] += 2048; // hack for SRB2, not actually in UDMF
 			if (ParseReverseSubtractive(Front.HighTexture)) Args[2] += 4096; // hack for SRB2, not actually in UDMF
+			if (General.Map.Config.GetLinedefActionInfo(Action).OldWater)
+			{
+                Args[2] += 8; // Add ignorebottomheight to flags
+				Args[2] += 8192; // One final flag to tell the editor to use the floor height instead of the ceiling height
+            }
+			
 			Args[3] = render ? (translucent ? ParseTranslucency(Front.HighTexture) : 255) : 0;
         }
 

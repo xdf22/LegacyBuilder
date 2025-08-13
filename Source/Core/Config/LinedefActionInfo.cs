@@ -53,6 +53,7 @@ namespace CodeImp.DoomBuilder.Config
         private readonly bool invisiblefof;
         private readonly bool threedfloorcustom;
         private readonly int threedfloorflags;
+        private readonly bool oldwater; // Additional parameter
         private readonly IDictionary<string,int> threedfloorflagsadditions;
         #endregion
 
@@ -79,6 +80,8 @@ namespace CodeImp.DoomBuilder.Config
         public bool InvisibleFOF { get { return invisiblefof; } }
         public bool ThreeDFloorCustom { get { return threedfloorcustom; } }
         public int ThreeDFloorFlags { get { return threedfloorflags; } }
+
+        public bool OldWater { get { return oldwater; } }
         #endregion
 
         #region ================== Constructor / Disposer
@@ -123,6 +126,9 @@ namespace CodeImp.DoomBuilder.Config
                 this.threedfloorflagsadditions.Add(p.Key, value);
 
             }
+
+            // Old legacy-style water
+            this.oldwater = cfg.ReadSetting(actionsetting + ".oldwater", false);
 
             // Read the args
             for (int i = 0; i < Linedef.NUM_ARGS; i++)

@@ -72,7 +72,8 @@ namespace CodeImp.DoomBuilder.BuilderModes
 			RenderAdditive = 64,
 			// Fake flags for SRB2
 			RenderSubtractive = 2048,
-			RenderReverseSubtractive = 4096
+			RenderReverseSubtractive = 4096,
+			OldWater = 8192
 		}
 
 		//mxd. 3D-Floor Types
@@ -139,10 +140,22 @@ namespace CodeImp.DoomBuilder.BuilderModes
 				alpha = General.Clamp(linedef.Args[3], 0, 255);
 				sd.Ceiling.CopyProperties(floor);
 				sd.Floor.CopyProperties(ceiling);
-				floor.type = SectorLevelType.Floor;
-				floor.plane = sd.Ceiling.plane.GetInverted();
-				ceiling.type = SectorLevelType.Ceiling;
-				ceiling.plane = (ignorebottomheight ? sd.Ceiling.plane : sd.Floor.plane.GetInverted()); //mxd. Use upper plane when "ignorebottomheight" flag is set
+
+				if (!((linedef.Args[2] & (int)Flags.OldWater) == (int)Flags.OldWater))
+				{
+					floor.type = SectorLevelType.Floor;
+					floor.plane = sd.Ceiling.plane.GetInverted();
+					ceiling.type = SectorLevelType.Ceiling;
+					ceiling.plane = (ignorebottomheight ? sd.Ceiling.plane : sd.Floor.plane.GetInverted()); //mxd. Use upper plane when "ignorebottomheight" flag is set
+				}
+				else
+				{
+                    // Old water specific stuff
+                    floor.type = SectorLevelType.Floor;
+                    floor.plane = sd.Floor.plane;
+                    ceiling.type = SectorLevelType.Ceiling;
+					ceiling.plane = sd.Floor.plane; // please please please please please please please
+                }
 
 				//mxd
 				clipsides = (!renderinside && !renderadditive && !rendersubtractive && !renderreversesubtractive && alpha > 254 && !ignorebottomheight);
