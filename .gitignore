@@ -96,6 +96,8 @@
 /Build/Scripting/Thumbs.db
 /Build/Scripting/obj
 
+/Build/Screenshots/*
+
 # /Build/Setup/
 /Build/Setup/*.suo
 /Build/Setup/PR
