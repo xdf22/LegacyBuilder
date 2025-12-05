@@ -358,9 +358,9 @@ namespace CodeImp.DoomBuilder.Config
 			defaulttestcompiler = cfg.ReadSetting("defaulttestcompiler", "");
 			defaulttexturescale = cfg.ReadSetting("defaulttexturescale", 1f);
 			defaultflatscale = cfg.ReadSetting("defaultflatscale", 1f);
-			defaultwalltexture = cfg.ReadSetting("defaultwalltexture", "STARTAN"); //mxd
-			defaultfloortexture = cfg.ReadSetting("defaultfloortexture", "FLOOR0_1"); //mxd
-			defaultceilingtexture = cfg.ReadSetting("defaultceilingtexture", "CEIL1_1"); //mxd
+			defaultwalltexture = cfg.ReadSetting("defaultwalltexture", "GFZROCK"); //mxd
+			defaultfloortexture = cfg.ReadSetting("defaultfloortexture", "FLOOR0_6"); //mxd
+			defaultceilingtexture = cfg.ReadSetting("defaultceilingtexture", "F_SKY1"); //mxd
 			scaledtextureoffsets = cfg.ReadSetting("scaledtextureoffsets", true);
 			formatinterface = cfg.ReadSetting("formatinterface", "");
             skillflags = cfg.ReadSetting("skillflags", false);

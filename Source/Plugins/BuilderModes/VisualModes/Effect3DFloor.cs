@@ -150,7 +150,11 @@ namespace CodeImp.DoomBuilder.BuilderModes
 				}
 				else
 				{
-                    // Old water specific stuff
+					// Old water specific stuff
+
+					sd.Ceiling.sector.SetCeilTexture(sd.Floor.sector.FloorTexture);
+					sd.Ceiling.disablelighting = true;
+
                     floor.type = SectorLevelType.Floor;
                     floor.plane = sd.Floor.plane;
                     ceiling.type = SectorLevelType.Ceiling;
