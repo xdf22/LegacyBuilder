@@ -6,10 +6,10 @@ using System.Resources;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Builder Modes")]
-[assembly: AssemblyDescription("Zone Builder Editing Modes")]
+[assembly: AssemblyDescription("Legacy Builder Editing Modes")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sonic Team Junior")]
-[assembly: AssemblyProduct("Zone Builder")]
+[assembly: AssemblyProduct("Legacy Builder")]
 [assembly: AssemblyCopyright("Copyright © 2007, 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

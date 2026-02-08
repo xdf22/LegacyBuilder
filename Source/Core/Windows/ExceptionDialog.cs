@@ -69,7 +69,7 @@ namespace CodeImp.DoomBuilder.Windows
 								  "[Dying]",
 								  "I'm outta here...",
 								  "GAME OVER",
-								  "SONIC MADE A BAD FUTURE IN Zone Builder",
+								  "SONIC MADE A BAD FUTURE IN Legacy Builder",
 								  "Sonic arrived just in time to see what little of the 'ruins' were left.",
 								  "The natural beauty of the zone had been obliterated.",
 								  "I'm putting my foot down.",
@@ -80,7 +80,19 @@ namespace CodeImp.DoomBuilder.Windows
 								  "ALL YOUR RINGS ARE BELONG TO US!",
 								  "Hohohoho!! *B^D",
 								  "So that's it. I was so busy playing SRB2 I never noticed... but... everything's gone...",
-								  "Tails! You made the engines quit!"
+								  "Tails! You made the engines quit!",
+								  
+								  // Some less well known SSN/SRB2 quotes
+								  "No! This can't be true!",
+								  "You little bugger!",
+								  "And there were the times when I despised you...",
+								  "*SLAM!*",
+								  "The flowers green, neither are the flowers",
+								  "Which jerk wrote the script?",
+								  "Our powers are useless against this...", // APL script
+								  "YOU! You git!",
+								  "Uh, didn't the world get destroyed?",
+								  "Phew... it was just a dream..."
 							  };
 			this.Text = titles[new Random().Next(0, titles.Length - 1)];
 		}
@@ -111,7 +123,7 @@ namespace CodeImp.DoomBuilder.Windows
 			}
 
 			// Get Zone Builder version
-			result += "Zone Builder: v" + General.ThisAssembly.GetName().Version.Major + "." + General.ThisAssembly.GetName().Version.Minor + Environment.NewLine + Environment.NewLine;
+			result += "Legacy Builder: v" + General.ThisAssembly.GetName().Version.Major + "." + General.ThisAssembly.GetName().Version.Minor + Environment.NewLine + Environment.NewLine;
 
 			return result;
 		}

@@ -119,7 +119,7 @@ namespace CodeImp.DoomBuilder.BuilderModes
 			// Now make a fine description
 			switch(buttons)
 			{
-				case 0: description += " Zone Builder could not find a solution to fix this line."; break;
+				case 0: description += " Legacy Builder could not find a solution to fix this line."; break;
 				case 1: description += " Click Create One Side to rebuild a single sidedef, making this line single-sided."; break;
 				case 2: description += " Click Create Both Side to rebuild both sides of the line, making this line double-sided."; break;
 			}

@@ -110,7 +110,7 @@
 			this.threadLink.TabIndex = 8;
 			this.threadLink.TabStop = true;
 			this.threadLink.Text = "You can help fixing this error if you provide the ways to reproduce it \r\nand the " +
-				"error report at Zone Builder's repository.";
+				"error report at Legacy Builder's repository.";
 			this.threadLink.UseCompatibleTextRendering = true;
 			this.threadLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.threadLink_LinkClicked);
 			// 

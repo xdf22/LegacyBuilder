@@ -617,7 +617,7 @@ namespace CodeImp.DoomBuilder.Config
 					{
 						// Error in configuration
 						General.WriteLogLine("Error in program configuration near line " + cfg.ErrorLine + ": " + cfg.ErrorDescription);
-						General.ShowErrorMessage("Default program configuration is corrupted. Please re-install Zone Builder.", MessageBoxButtons.OK);
+						General.ShowErrorMessage("Default program configuration is corrupted. Please re-install Legacy Builder.", MessageBoxButtons.OK);
 						return false;
 					}
 				}
@@ -644,7 +644,7 @@ namespace CodeImp.DoomBuilder.Config
 				{
 					// Error in configuration
 					General.WriteLogLine("Error in program configuration near line " + cfg.ErrorLine + ": " + cfg.ErrorDescription);
-					General.ShowErrorMessage("Default program configuration is corrupted. Please re-install Zone Builder.", MessageBoxButtons.OK);
+					General.ShowErrorMessage("Default program configuration is corrupted. Please re-install Legacy Builder.", MessageBoxButtons.OK);
 					return false;
 				}
 			}
